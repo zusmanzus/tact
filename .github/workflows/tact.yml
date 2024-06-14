@@ -136,9 +136,9 @@ jobs:
 
       - name: Test compatibility with Blueprint
         run: |
-          yarn create ton -- test-project --type tact-counter --contractName Counter
-          cd test-project
-          yarn link @tact-lang/compiler
-          yarn build
-          yarn test
+          yarn create ton -- test-project --type tact-counter --contractName Counter &&
+          cd test-project &&
+          yarn link @tact-lang/compiler &&
+          yarn build &&
+          yarn test &&
           yarn tact --version
